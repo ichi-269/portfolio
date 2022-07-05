@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+/* ========== すべて共通 ========== */
+html, body {
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #393939;
+	background: #d3d3d3;
+}
+body, div, p, h1, h2, h3, h4, ul, figure {
+	margin: 0;
+	padding: 0;
+}
+p, td, th, li {
+	line-height: 1.8;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+a {
+	color: #709a00;
+}
+a:hover {
+	color: #95cd00;
+}
+a:active {
+	color: #4b6700;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* 共通の見出し */
+main h1 {
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed #d3d3d3;
+	font-weight: normal;
+	font-size: 1.6rem;
+}
+
+.container {
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 1000px;
+}
+@media screen and (min-width: 768px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* ========== ヘッダー ========== */
+header{
+	background: #a9a9a9;
+	width:100%;
+}
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu-btn {
+	padding: 10px 0;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/hamburger.png) no-repeat center center;
+	background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+	.header-logo {
+		width: 200px;
+		height: 46px;
+	}
+	.menu-btn {
+		display: none;
+	}
+}
+
+/* ========== ナビゲーション ========== */
+
+.navbar {
+	padding: 0px 20px;
+	display: none;
+	list-style-type: none;
+}
+.navbar a {
+	width:100px;
+	height:50px;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	color: #fff;
+	text-decoration: none;
+}
+.navbar a:hover {
+	background: #d3d3d3;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		display: flex !important;
+	}
+	.navbar li {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+	.navbar a.nav-current {
+		background: #d3d3d3;
+	}
+}
+
+/* ========== メインエリア基本レイアウト ========== */
+main {
+	/*padding-top: 50px;*/
+	padding-bottom: 50px;
+	background: #efefef;
+}
+
+/* ========== フッター ========== */
+footer {
+	background: #a9a9a9;
+	font-size: 0.9rem;
+	color: #fff;
+}
+.footer-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.footer-nav {
+	list-style-type: none;
+}
+.footer-nav li {
+	display: inline;
+	padding: 0 1rem 0 0;
+}
+.footer-nav a {
+	color: #fff;
+	text-decoration: none;
+}
+.footer-nav a:hover {
+	opacity: 0.5;
+}
+
+/* ========== index.html トップページ ========== */
+
+/* about me */
+.aboutme{
+	background:white;
+	padding: 50px 50px;
+}
+.aboutme-h2 {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.profile{
+	margin:50px 0px;
+}
+.skills{
+	margin:50px 0px;
+}
+
+@media screen and (min-width: 767px) {
+	.aboutme-h2 {
+		font-size: 2.4rem;
+	}
+	.profile{
+		margin-left:50px;
+	}
+	.skills{
+		margin-left:50px;
+	}
+	dl{
+		margin-left: 40px;
+	}
+	dt{
+		float:left;
+	}
+	dd{
+		margin: 10px 150px;
+	}
+}
+
+/* works */
+.works{
+	background:#f5f5f5;
+	padding: 50px 50px;
+}
+.works-h2 {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 767px) {
+	.works-h2 {
+		font-size: 2.4rem;
+	}
+}
+
+/* コース一覧 */
+.home-course {
+	display: flex;
+	flex-flow: column;
+}
+.home-course li {
+	flex: 1 1 auto;
+	margin: 0 2px 4px 2px;
+	border: solid 5px #fff;
+	list-style-type: none;
+	background: #fff;
+}
+
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+@media screen and (min-width: 768px) {
+	.home-course {
+		flex-flow: row;
+	}
+}
+
+.home-course a {
+	color: #393939;
+	text-decoration: none;
+}
+
+.home-course figure:hover {
+	opacity: 0.5;
+}
+
+.home-course figcaption {
+	padding: 15px 0;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* ========== course コース紹介 ========== */
+/* コース概要 */
+.course-container {
+	display: flex;
+	flex-flow: column;
+}
+
+@media screen and (min-width: 768px) {
+	.course-container {
+		flex-flow: row;
+	}
+	.course-image {
+		flex: 1 1 400px;    
+		margin-right: 20px;
+	}
+	.course-text {
+		flex: 1 1 580px;
+	}
+}
+
+.course-image img {
+	border-radius: 10px;
+}
+.course-h2 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+.course-spec {
+	list-style-type: none;
+}
+.course-label {
+	display: inline-block;
+	padding: 0.1rem 0.5rem;
+	margin-right: 0.1rem;
+	border-radius: 3px;
+	background: #c84040;
+	font-size: 0.7rem;
+	color: #fff;
+}
+
+/* コース説明 */
+.course-h3 {
+	margin: 30px 0 10px 0;
+	color: #c84040;
+	border-bottom: 1px dashed #c84040;
+	font-size: 1.3rem;
+}
+.course-description {
+	margin-top: 30px;
+	padding: 30px;
+	background: #fff url(../images/point.png) no-repeat;
+	background-size: 50px 50px;
+	border-radius: 10px;
+}
+
+/* スケジュール（テーブル） */
+.course-schedule {
+	border-collapse: collapse;
+}
+.course-schedule td, .course-schedule th {
+	padding: 0.5em 1em;
+	border-bottom: 1px dotted #aeaeae;
+}
+
+
+/* お申込みボタン */
+.course-button {
+	display: block;
+	width: 300px;
+	margin: 30px auto;
+	padding: 1rem 0;
+	background-color: #709a00;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.course-button:hover {
+	background-color: #95cd00;
+	color: #fff;
+}
+
+/* ========== qanda よくある質問 ========== */
+.q-and-a {
+	margin-top: 1em;
+	padding: 8px 0 0 60px;
+}
+.question {
+	font-weight: bold;
+	color: #6eba44;
+	background: url(../images/q.png) no-repeat left top;
+	background-size: 40px 40px;
+}
+.answer {
+	margin-bottom: 2em;
+	background: url(../images/a.png) no-repeat left top;
+	background-size: 40px 40px;
+}
