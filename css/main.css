@@ -13,6 +13,7 @@ body, div, p, h1, h2, h3, h4, ul, figure {
 }
 p, td, th, li {
 	line-height: 1.8;
+	list-style:none
 }
 img {
 	width: 100%;
@@ -27,11 +28,7 @@ a:hover {
 a:active {
 	color: #4b6700;
 }
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
+
 /* 共通の見出し */
 main h1 {
 	margin-bottom: 1rem;
@@ -55,8 +52,11 @@ main h1 {
 
 /* ========== ヘッダー ========== */
 header{
-	background: #a9a9a9;
+	z-index: 9999;
+	background: rgba(180, 180, 180, 0.5);
 	width:100%;
+	position:fixed;
+	top:0px;
 }
 .header-inner {
 	display: flex;
@@ -91,6 +91,9 @@ header{
 	list-style-type: none;
 }
 .navbar a {
+  /* border: none;  /* 枠線を消す 
+  outline: none; /* クリックしたときに表示される枠線を消す 
+  background: transparent; 背景の灰色を消す */
 	width:100px;
 	height:50px;
 	display: flex;
@@ -100,7 +103,7 @@ header{
 	text-decoration: none;
 }
 .navbar a:hover {
-	background: #d3d3d3;
+	background: #e6e5e5;
 }
 
 @media screen and (min-width: 768px) {
@@ -150,12 +153,43 @@ footer {
 
 /* ========== index.html トップページ ========== */
 
+/* about this site */
+.aboutsite{
+	min-height: 100vh;
+	background: #f5f5f5;
+	padding: 50px 50px;
+	display: flex;
+	align-items:center;
+	flex-direction: column;
+	justify-content: center;
+}
+.aboutsite-h2 {
+	font-size: 1.4rem;
+	padding:50px 50px;
+	display:block;
+}
+.aboutsite-p{
+	text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+	.aboutsite-h2 {
+		font-size: 2.4rem;
+	}
+}
+
 /* about me */
 .aboutme{
+	min-height: 100vh;
 	background:white;
 	padding: 50px 50px;
+	display: flex;
+	/* align-items:center; */
+	flex-direction: column;
+	justify-content: center;
 }
 .aboutme-h2 {
+	padding-top:70px;
 	text-align: center;
 	font-size: 1.4rem;
 }
@@ -188,18 +222,24 @@ footer {
 	}
 }
 
-/* works */
-.works{
+/* products */
+.products{
+	min-height: 100vh;
 	background:#f5f5f5;
 	padding: 50px 50px;
+	display: flex;
+	/* align-items:center; */
+	flex-direction: column;
+	justify-content: center;
 }
-.works-h2 {
+.products-h2 {
+	padding: 20px 20px;
 	text-align: center;
 	font-size: 1.4rem;
 }
 
 @media screen and (min-width: 767px) {
-	.works-h2 {
+	.products-h2 {
 		font-size: 2.4rem;
 	}
 }
@@ -340,3 +380,39 @@ footer {
 	background: url(../images/a.png) no-repeat left top;
 	background-size: 40px 40px;
 }
+
+/* fade in */
+
+.topfadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 1.5s;
+}
+
+.topfadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.fadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 1s;
+}
+
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+
+/* .fadein {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 500ms;
+	}
+
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	} */

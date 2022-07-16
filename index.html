@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="子どもから大人まで、プログラミングを学ぶなら、Codera。">
+<meta name="description" content="Ichino Portfolio">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <title>Ichino Portfolio</title>
-<!--<link rel="stylesheet" href="css/normalize.css">-->
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -24,11 +24,10 @@
 			<nav>
 				<div class="container nav-container">
 					<ul class="navbar">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html">AboutMe
-						</a></li>
-						<li><a href="index.html">Works</a></li>
-						<li><a href="index.html">Contact</a></li>
+						<li><a href="#">Top</a></li>
+						<li><a href="#aboutsite">About Site</a></li>
+						<li><a href="#aboutme">About Me</a></li>
+						<li><a href="#products">Products</a></li>
 					</ul>
 				</div><!-- /nav-container -->
 			</nav>
@@ -41,7 +40,7 @@
 
 <!-- ========== keyvisual ========== -->
 <div class="home-keyvisual">	
-	<img src="images/keyvisual.jpeg" alt="Codera" class="img-responsive">
+	<img src="images/keyvisual.jpeg" alt="IchiLabo" class ="topfadein">
 </div><!-- /.home-keyvisual -->
 <!-- ========== /keyvisual ========== -->
 
@@ -49,7 +48,12 @@
 <section class="main">
 	<div class="container">
 		<main>
-			<div class = "aboutme">
+			<div class = "aboutsite fadein" id="aboutsite">
+				<h2 class = "aboutsite-h2">About This Site</h2>
+				<p class = "aboutsite-p">ここは市野弘人のポートフォリオサイトです。<br>これまでに身につけたスキル、手がけてきた製作物をまとめています。</p>
+			</div>
+
+			<div class = "aboutme fadein" id="aboutme">
 				<h2 class = "aboutme-h2">About Me</h2>
 				<div class = "profile">
 					<h3>Profile</h3>
@@ -57,31 +61,39 @@
 						<dt>Name<dd>市野弘人（Ichino Hiroto）<dd></dt>
 						<dt>Speciality<dd>認知科学 データサイエンス<dd></dt>
 						<dt>SNS<dd><a href= "https://github.com/ichi-269" target="_blank" rel="noreferrer noopener">Git</a> Twitter<dd></dt>
+						<dt>e-mail<dd>ichino9824@gmail.com</dd></dt>
 					</dl>
 				</div>
 
 				<div class = "skills">
 					<h3>My Skills</h3>
 					<dl>
-						<dt>Html Css<dd>あいうえお<dd></dt>
-						<dt>Python<dd>あいうえお<dd></dt>
-						<dt>C<dd>あいうえお<dd></dt>
+						<dt>AtCoder<dd>茶色コーダーです。初学者ですが簡単なアルゴリズムを理解、実装する能力があります。<dd></dt>
+						<dt>データサイエンス<dd>データに応じて統計的な分析を行うことができます。<dd></dt>
+						<dt>使用可能言語<dd>
+							<ul>
+								<li>HTML CSS</li>
+								<li>Java Script</li>
+								<li>C</li>
+								<li>Python</li>
+							</ul>
+							<dd></dt>
 					</dl>
 				</div>
 			</div>
 
-			<div class = "works">
-				<h2 class="works-h2">Works</h2>
+			<div class = "products fadein" id = "products">
+				<h2 class="products-h2">Products</h2>
 			<ul class="home-course">
 				<li>
-					<a href="index.html"><figure><img src="images/course1.png" alt="HTML&CSS基礎">
-					<figcaption>アプリ1
+					<a href="sub.html"><figure><img src="images/product1.png" alt="統計分析">
+					<figcaption>認知実験の実施及び統計的分析
 					</figcaption>
 					</figure></a>
 				</li>
 				<li>
-					<a href="#"><figure><img src="images/course2.png" alt="WordPressサイト構築">
-					<figcaption>アプリ2</figcaption>
+					<a href="https://icpro-54b88.web.app/" target="_blank"><figure><img src="images/product2.png" alt="掲示板サイト">
+					<figcaption>掲示板サイト</figcaption>
 					</figure></a>
 				</li>
 				<li>
