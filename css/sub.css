@@ -88,8 +88,8 @@ header{
 
 .navbar {
 	padding: 0px 20px;
-	display: none;
-	list-style-type: none;
+	/* display: none; */
+	/* list-style-type: none; */
 }
 .navbar a {
   /* border: none;  /* 枠線を消す 
@@ -107,7 +107,7 @@ header{
 	background: #e1e1e1;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) { */
 	.navbar {
 		display: flex !important;
 	}
@@ -118,7 +118,7 @@ header{
 	.navbar a.nav-current {
 		background: #d3d3d3;
 	}
-}
+/* } */
 
 /* ========== メインエリア基本レイアウト ========== */
 main {
